@@ -78,7 +78,7 @@ app.get("/posts/:postName", function(req, res){
 
   Blog.findOne({blogTitle: requestedTitle}, function(err, foundItem){
     if(!err){
-      console.log(foundItem);
+      //console.log(foundItem);
       res.render("post", {
         title: foundItem.blogTitle,
         content: foundItem.blogContent
